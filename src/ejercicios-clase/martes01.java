@@ -7,9 +7,9 @@ public class martes01 {
                 System.out.println("ingrese segundo numero");
                 double numero2 = leer.nextDouble();
 
-                 System.out.println("ingrese su nombre");
-               String name = leer.nextLine();
-               System.out.println("hola, "+ name );
+                System.out.println("ingrese su nombre");
+                String name = leer.nextLine();
+                System.out.println("hola, "+ name );
 
                 double suma = numero1 + numero2;
                 System.out.println("la suma es: "+ suma);
