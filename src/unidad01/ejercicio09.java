@@ -1,3 +1,4 @@
+package unidad01;
 import java.util.Scanner;
 
 public class ejercicio09 {

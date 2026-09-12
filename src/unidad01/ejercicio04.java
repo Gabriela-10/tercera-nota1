@@ -1,3 +1,4 @@
+package unidad01;
 public class ejercicio04 {
     public static void main(String[] args) {
         final int camisa = 25;

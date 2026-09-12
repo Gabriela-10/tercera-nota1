@@ -1,3 +1,4 @@
+package unidad01;
 import java.util.Scanner;
 public class ejercicio10 {
     public static void main(String[] args){
@@ -7,7 +8,7 @@ public class ejercicio10 {
         System.out.println("2.           Restar");
         System.out.println("3.      Multiplicar");
         System.out.println("4.          Dividir");
-        System.out.println("ingrese el numero de la operacioln deseada");
+        System.out.println("ingrese el numero de la operacio deseada");
         int opcion = leer.nextInt();
         System.out.println("ingrese dos numeros enteros");
         int numero1 = leer.nextInt();  

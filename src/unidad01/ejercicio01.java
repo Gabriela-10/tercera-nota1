@@ -1,3 +1,4 @@
+package unidad01;
 public class ejercicio01 {
     public static void main(String[] args) throws Exception {
         int edad = 17;
