@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 public class martes02 {
      public static void main(String[] args)  {
-        Scanner leer_Scanner =new Scanner(System.in);
         byte edad = 32;
         if (edad >= 18 || edad ==30 ){
             System.out.println("sos mayor de edad");
