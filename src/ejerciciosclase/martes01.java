@@ -1,3 +1,4 @@
+package ejerciciosclase;
 import java.util.Scanner;
 public class martes01 {
         public static void main(String[] args) throws Exception {

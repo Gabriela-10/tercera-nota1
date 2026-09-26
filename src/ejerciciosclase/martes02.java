@@ -1,3 +1,5 @@
+package ejerciciosclase;
+
 public class martes02 {
      public static void main(String[] args)  {
         byte edad = 32;
