@@ -13,7 +13,7 @@ public class inventarioC {
         int longitudProductos = productos.length;
         double ValorTotal= 0;
         String ProductoModificar;
-        boolean isEqual;
+        boolean BuscarProducto;
         int CantidadProductos;
     for (int j=0; j<1 ;){
         //menu para elegir la opcion requerida 
@@ -21,7 +21,7 @@ public class inventarioC {
         System.out.println("elegir opcion deseada");
         System.out.println("1. registrar inventario de 5 productos");
         System.out.println("2. Modificar cantidad de un producto");
-        System.out.println("3. Modificar pcantidad de productos");
+        System.out.println("3. Modificar cantidad de productos");
         int valor =scanner.nextInt();
         
         //los casos dependiendo del valor
@@ -39,6 +39,20 @@ public class inventarioC {
                     PrecioUnitario[i]= scanner.nextDouble();
                     scanner.nextLine();
                 }
+
+                 //segundo for para calcular los precios totales y datos de salida
+
+                System.out.println("Reporte final: ");
+                for (int i= 0; i< longitudProductos ;i++){
+                    PrecioTotal[i]= cantidades[i] * PrecioUnitario[i];
+                    System.out.println("Productos      Cantidades    Precio unitario   Precio total");
+                    System.out.println(productos[i]+"              "+ cantidades[i]+"                "+ PrecioUnitario[i]+"                 "+ PrecioTotal[i]);
+                    ValorTotal= ValorTotal+PrecioTotal[i];
+                }
+
+                //total inventario
+                System.out.println("El valor total del inventario es: "+ ValorTotal);
+
                 break;
             case 2:
 
@@ -47,16 +61,30 @@ public class inventarioC {
                 System.out.println("ingrese el nombre del producto que se desea modificar la cantidad");
                 ProductoModificar= scanner.nextLine();
 
-                 for (int i= 0; i< longitudProductos ;i++){
-                    isEqual = ProductoModificar.equals(productos[i]);
-                    if (isEqual == true ){
-                        System.out.println("Ingrese nueva cantidad");
+                //encontrar producto
+
+                for (int i =0; i<longitudProductos; i++){
+                    if (productos[i].equals(ProductoModificar)){
+                        System.out.println("ingrese la cantidad nueva");
                         cantidades[i]= scanner.nextInt();
-                    } else {
-                        System.out.println("producto no encontrado");
-                    }
+                    } 
+
                 }
+                //segundo for para calcular los precios totales y datos de salida
+
+                System.out.println("Reporte final: ");
+                for (int i= 0; i< longitudProductos ;i++){
+                    PrecioTotal[i]= cantidades[i] * PrecioUnitario[i];
+                    System.out.println("Productos      Cantidades    Precio unitario   Precio total");
+                    System.out.println(productos[i]+"              "+ cantidades[i]+"                "+ PrecioUnitario[i]+"                 "+ PrecioTotal[i]);
+                    ValorTotal= ValorTotal+PrecioTotal[i];
+                }
+
+                //total inventario
+                System.out.println("El valor total del inventario es: "+ ValorTotal);
             
+                break;
+                
             case 3:
 
                 //modificar productos
